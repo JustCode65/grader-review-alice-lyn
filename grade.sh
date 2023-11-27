@@ -12,12 +12,14 @@ echo 'Finished cloning'
 tests=`find student-submission -name "ListExample*.java"`
 
 
-cp $tests *Test*.java grading-area 
+cp $tests *Test*.java grading-area #wat does this do?
 cp *Test*.java grading-area
 cp ./student-submission/* grading-area
 
-cp -R lib grading-area
+cp -R lib grading-area #wat does this do?
 cd grading-area
+
+# make sure to let the user know if they submitted a good file
 
 javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
 for file in $tests
@@ -27,7 +29,6 @@ do
     echo $output
 
 done
-
 # Draw a picture/take notes on the directory structure that's set up after
 # getting to this point
 
